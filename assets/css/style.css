@@ -137,7 +137,7 @@
             animation: fadeIn 1s ease-out;
         }
         
-        .hero-image {
+        /* .hero-image {
             flex: 1;
             display: flex;
             justify-content: center;
@@ -149,6 +149,36 @@
             height: auto;
             border-radius: 10px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        } */
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        
+        .hero-image img {
+            max-width: 80%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+            padding: 5px;
+            background: linear-gradient(to bottom, #0073e6, #00c6ff); /* Gradient Border Effect */
+        }
+        .hero-image img:hover {
+            transform: translateY(-10px) scale(1.05) rotate(-2deg);
+        }
+        
+        /* Adding a glow effect behind the image */
+        .hero-image::before {
+            content: "";
+            position: absolute;
+            width: 90%;
+            height: 90%;
+            background: radial-gradient(circle, rgba(0, 115, 230, 0.3), transparent);
+            border-radius: 10px;
+            z-index: -1;
         }
         
         .hero h1 {
@@ -215,6 +245,60 @@
         .skill-card:hover {
             transform: translateY(-5px);
         }
+        /* experience  */
+        .work-experience {
+            padding: 60px 20px;
+            background: #ffffff;
+            text-align: center;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #333;
+        }
+        
+        .experience-content {
+            display: flex;
+            justify-content: space-between; /* Keeps the boxes side-by-side */
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .experience-box {
+            background: #f8f9fa;
+            padding: 20px;
+            width: 45%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: left;
+        }
+        
+        .experience-box h3 {
+            color: #007bff;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .experience-box p {
+            font-size: 1rem;
+            margin: 5px 0;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .experience-content {
+                flex-direction: column; /* Stacks the items on smaller screens */
+            }
+        
+            .experience-box {
+                width: 100%;
+            }
+        }
+        
+
+
+
         /* Problem Solving Section */
         .problem-solving {
             padding: 4rem 2rem;
