@@ -138,17 +138,18 @@
                     <p>Experienced in API testing, ensuring seamless communication between services. Skilled in using tools like Postman and Swagger for functional, performance, and security testing. Responsible for identifying and reporting bugs, verifying fixes, and improving software reliability.</p>
                 </div>
                 <div class="experience-box">
-                    <h3>Junior Developer</h3>
-                    <p><strong>Company:</strong> XYZ Solutions</p>
-                    <p><strong>Duration:</strong> June 2020 - Dec 2021</p>
-                    <p>Developed and maintained applications using ASP.NET Core and SQL Server.</p>
+                    <h3>Font Designer</h3>
+                    <p><strong>Company:</strong> <a target="_blank" style="text-decoration: none;" rel="noopener" href="https://brandlly.com/">Brandlly</a></p>
+                    <p><strong>Duration:</strong> June 2022 - Dec 2022</p>
+                    <p>Developed and maintained applications using Html5, CSS3, JavaScript, Bootstrap5, TailwindCSS.</p>
                 </div>
                 <div class="experience-box">
-                    <h3>Junior Developer</h3>
-                    <p><strong>Company:</strong> XYZ Solutions</p>
-                    <p><strong>Duration:</strong> June 2020 - Dec 2021</p>
-                    <p>Developed and maintained applications using ASP.NET Core and SQL Server.</p>
+                    <h3>Full Stack Web Developer (Inten)</h3>
+                    <p><strong>Company:</strong><a target="_blank" style="text-decoration: none;" rel="noopener" href="https://bioxincosmeceuticals.com/"> Unicorns Codes Ltd.</a></p>
+                    <p><strong>Duration:</strong> June 2021 - Dec 2021</p>
+                    <p>Developed and maintained applications using Html5, Css, JavaScript,Bootstrap5.</p>
                 </div>
+                
             </div>
         </div>
     </section>
@@ -218,37 +219,33 @@
             </div>
         </div>
     </section>
-    <!-- Blog Section -->
-<section class="blog-section" id="blog">
-    <h2 class="section-title">Latest Blog Posts</h2>
-    <div class="blog-container">
-        <div class="blog-card">
-            <img src="blog1.jpg" alt="Blog 1">
-            <div class="blog-content">
-                <h3>Understanding ASP.NET Core</h3>
-                <p>Learn the basics of ASP.NET Core and how to build scalable web applications.</p>
-                <a href="#">Read More</a>
-            </div>
+    <!-- Awards Section -->
+<section class="awards-section" id="awards">
+    <h2 class="section-title">Awards List</h2>
+    <div class="awards-container">
+        <div class="award-card" onclick="showFullImage('assets/Images/isdb.jpg', 'ISDB Award')">
+            <img src="assets/Images/isdb.jpg" alt="ISDB Award" class="award-img">
+            <h3 class="award-title">IsDb Success Full Course Award</h3>
         </div>
-        <div class="blog-card">
-            <img src="blog2.jpg" alt="Blog 2">
-            <div class="blog-content">
-                <h3>C# Best Practices</h3>
-                <p>Explore the best coding practices in C# to write clean and efficient code.</p>
-                <a href="#">Read More</a>
-            </div>
+        <div class="award-card" onclick="showFullImage('./assets/Images/HackerRank.jpeg', 'Best Coding Practices')">
+            <img src="./assets/Images/HackerRank.jpeg" alt="Best Coding Practices" class="award-img">
+            <h3 class="award-title">Best Coding Practices</h3>
         </div>
-        <div class="blog-card">
-            <img src="blog3.jpg" alt="Blog 3">
-            <div class="blog-content">
-                <h3>Building Real-time Chat Apps</h3>
-                <p>Learn how to use SignalR and WebSockets to create real-time applications.</p>
-                <a href="#">Read More</a>
-            </div>
+        <div class="award-card" onclick="showFullImage('././assets/Images/club.jpeg', 'Real-time Chat App')">
+            <img src="././assets/Images/club.jpeg" alt="Computer Club Southeast University" class="award-img">
+            <h3 class="award-title">Computer Club Southeast University</h3>
         </div>
     </div>
 </section>
 
+<!-- Full Image Modal -->
+<div id="fullImageModal" class="modal" onclick="closeFullImage()">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="fullImage">
+    
+<div id="imageCaption"></div>
+<!-- Contact Info  -->
+</div>
     <section class="section" id="contact">
         <h2>Contact Me</h2>
         <div class="contact-info">
@@ -282,7 +279,18 @@
     <footer>
         <p>&copy; 2024 Md Arafat Rahman. All rights reserved.</p>
     </footer>
-
+    <script>
+        function showFullImage(src, caption) {
+            document.getElementById("fullImage").src = src;
+            document.getElementById("imageCaption").innerText = caption;
+            document.getElementById("fullImageModal").style.display = "block";
+        }
+    
+        function closeFullImage() {
+            document.getElementById("fullImageModal").style.display = "none";
+        }
+    </script>
+    
     <!-- <script>
         // Function to handle CV download
         function downloadCV() {
